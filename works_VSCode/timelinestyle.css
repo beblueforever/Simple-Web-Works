@@ -1,0 +1,38 @@
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+
+    background-color: #232323;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    
+    
+}
+h2{
+
+    color: white;
+    size: 20px;
+    margin: 20px;
+    text-shadow: red;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-spacing: 5px;
+}
+
+
+
+body{
+    color: white;
+    size: 20px;
+    margin: 20px;
+    margin-top: 5px;
+    text-shadow: red;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    word-spacing: 5px;
+}

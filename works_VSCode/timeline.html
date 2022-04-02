@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Time</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link rel='stylesheet' type='text/css' media='screen' href='timelinestyle.css'>
+    </head>
+<body>
+
+<h2> Country Time</h2>
+
+
+</body>
+
+<script>
+    var date =new Date();
+    var utcTime = date.getTime() + (date.getTimezoneOffset() * 60000);
+    var timeOffset1 = 3;
+    var timeOffset2 = -4;
+    var timeOffset3 = 8;
+    var timeOffset4 = 2;
+
+    var IstanbulTime = new Date(utcTime + (3600000 * timeOffset1));
+    var NewYorkTime = new Date(utcTime + (3600000 * timeOffset2));
+    var ParisTime = new Date(utcTime + (3600000 * timeOffset4));
+    var PekinTime = new Date(utcTime + (3600000 * timeOffset3));
+
+    document.write("istanbul Time : " + IstanbulTime + "<br></br>");
+    document.write("New York Time : " + NewYorkTime + "<br></br>");
+    document.write("Paris Time : " + ParisTime + "<br></br>");
+    document.write("Pekin Time : " + PekinTime + "<br></br>")
+</script>
+
+</html>

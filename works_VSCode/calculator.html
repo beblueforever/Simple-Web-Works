@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Calculator</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='stylecalculator.css'>
+
+    <h1> Calculator</h1>
+
+
+    <SCRIPT LANGUAGE="JavaScript">
+       
+
+        function addChar(input, character) {
+            if(input.value == null || input.value == "0")
+                input.value = character
+            else
+                input.value += character
+        }
+        function log(form){
+            form.display.value = Math.log(form.display.value);}
+
+        function cos(form) {
+            form.display.value = Math.cos(form.display.value);}
+
+        function sin(form) {
+            form.display.value = Math.sin(form.display.value);}
+
+        function tan(form) {
+            form.display.value = Math.tan(form.display.value);}
+
+        function sqrt(form) {
+            form.display.value = Math.sqrt(form.display.value);}
+
+        function ln(form) {
+            form.display.value = Math.log(form.display.value);}
+
+        function exp(form) {
+            form.display.value = Math.exp(form.display.value);}
+
+        function sqrt(form) {
+            form.display.value = Math.sqrt(form.display.value);}
+
+        function deleteChar(input) {
+            input.value = input.value.substring(0, input.value.length - 1)
+        }
+
+        function changeSign(input) {
+            if(input.value.substring(0, 1) == "-")
+                input.value = input.value.substring(1, input.value.length)
+            else
+                input.value = "-" + input.value
+        }
+
+        function compute(form)  {
+            form.display.value = eval(form.display.value)}
+
+        function square(form)  {
+            form.display.value = eval(form.display.value) *
+                eval(form.display.value)}
+
+        function checkNum(str)  {
+            for (var i = 0; i < str.length; i++) {
+                var ch = str.substring(i, i+1)
+                if (ch < "0" || ch > "9") {
+                    if (ch != "/" && ch != "*" && ch != "+" && ch !=
+                        "-" && ch != "."
+                        && ch != "(" && ch!= ")") {
+                        alert("invalid entry!")
+                        return false
+                    }
+                }
+            }
+            return true
+        }
+
+    </SCRIPT>
+</head>
+
+
+<body>
+    <form id="form">
+    <input name="display" id="gets" class="display" value="0" size=25>
+    <br>
+
+
+    <input type="button" value="    7    " onClick="addChar(this.form.display, '7')" class="its" >
+    <input type="button" value="    8    " onClick="addChar(this.form.display, '8')"class="its">
+    <input type="button" value="    9    " onClick="addChar(this.form.display, '9')"class="its">
+    <input type="button" value="    /    " onClick="addChar(this.form.display, '/')"class="its">
+    <br>
+
+
+    <input type="button" value="    4    " onClick="addChar(this.form.display, '4')"class="its">
+    <input type="button" value="    5    " onClick="addChar(this.form.display, '5')"class="its">
+    <input type="button" value="    6    " onClick="addChar(this.form.display, '6')"class="its">
+    <input type="button" value="    *    " onClick="addChar(this.form.display, '*')"class="its">
+    <br>
+
+
+    <input type="button" value="    1    " onClick="addChar(this.form.display, '1')"class="its">
+    <input type="button" value="    2    " onClick="addChar(this.form.display, '2')"class="its">
+    <input type="button" value="    3    " onClick="addChar(this.form.display, '3')"class="its">
+    <input type="button" value="    -    " onClick="addChar(this.form.display, '-')"class="its">
+    <br>
+
+
+    <input type="button" value="   0     " onClick="addChar(this.form.display, '0')"class="its">
+    <input type="button" value="    .    " onClick="addChar(this.form.display, '.')"class="its">
+    <input type="button" value="   +/-   " onClick="changeSign(this.form.display)"class="its">
+    <input type="button" value="    +    " onClick="addChar(this.form.display, '+')"class="its">
+    <br>
+
+    <input type="button" value="   cos   " onClick="if (checkNum(this.form.display.value))
+{ cos(this.form) }"class="its">
+    <input type="button" value="   sin   " onClick="if (checkNum(this.form.display.value))
+{ sin(this.form) }"class="its">
+    <input type="button" value="   tan   " onClick="if (checkNum(this.form.display.value))
+{ tan(this.form) }"class="its">
+    <input type="button" value="   log  " onClick="if (checkNum(this.form.display.value))
+{ log(this.form) }"class="its">
+
+    <br>
+    <input type="button" value="  C  " onClick="this.form.display.value = 0 "class="its">
+
+    <input type="button" value="   =   " name="enter" onClick="if (checkNum(this.form.display.value))
+{ compute(this.form) }"class="its">
+</FORM>
+
+</body>
+
+</html>
